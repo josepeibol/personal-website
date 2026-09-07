@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+.venv/
+venv/
+
+# Environment and local config
+.env
+config/config.json
+
+# Logs
+logs/*
+!logs/.gitkeep
+
+# OS and editor files
+.DS_Store
+.idea/
+.vscode/
