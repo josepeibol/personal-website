@@ -15,13 +15,13 @@ export const siteConfig = {
   },
   promise: {
     eyebrow: "Producto digital con perspectiva técnica",
-    titleLines: ["Convierto complejidad", "en productos que", "avanzan."],
+    titleLines: ["Pasemos de", "complejidad", "a productos que", "avanzan."],
     body: "Alineo visión, equipos y ejecución para llevar productos digitales desde la decisión hasta la entrega.",
-    attributes: ["Estrategia", "Entrega", "Adopción"]
+    attributes: ["Estrategia", "Entrega", "Adopción", "Colaboración", "Producto"]
   },
   cta: {
     label: "Hablemos",
-    href: "mailto:jose.pablo.martin.garcia@gmail.com"
+    href: "mailto:contact@josepablomartin.com"
   },
   navigation: [
     { label: "Perfil", href: "#perfil" },
@@ -34,18 +34,18 @@ export const siteConfig = {
       id: "perfil",
       number: "02",
       label: "Perfil",
-      titleLines: ["Producto, personas", "y tecnología", "en la misma dirección."],
+      titleLines: ["Producto, personas", "y tecnología"],
       paragraphs: [
         "Soy Product Owner y Product Manager con formación en ingeniería informática y experiencia internacional en banca, aviación, consultoría y operaciones logísticas.",
         "Trabajo entre la estrategia y el detalle: traduzco necesidades complejas en prioridades claras, coordino equipos multidisciplinares y acompaño la adopción del producto."
       ],
-      aside: "Español nativo · Inglés y francés fluidos · Alemán básico"
+      aside: "Español nativo · Inglés fluido · Francés fluido · Alemán básico"
     },
     detailScene: {
       id: "detalle",
       number: "03",
       label: "Escala",
-      titleLines: ["Decisiones claras.", "Impacto medible."],
+      titleLines: ["Claridad con impacto medible."],
       body: "Experiencia gestionando plataformas críticas, transiciones masivas y productos usados a escala internacional."
     },
     pillars: {
@@ -125,7 +125,7 @@ export const siteConfig = {
       label: "Contacto",
       titleLines: ["Cuéntame qué", "necesitas mover."],
       body: "Si buscas liderazgo de producto con visión técnica y experiencia internacional, podemos empezar con una conversación breve.",
-      directEmail: "jose.pablo.martin.garcia@gmail.com",
+      directEmail: "contact@josepablomartin.com",
       linkedin: { label: "LinkedIn", href: "https://www.linkedin.com/in/josepablomartin/" },
       resume: { label: "Descargar CV", href: "Resume Jose Pablo Martin.pdf" }
     }
@@ -154,7 +154,7 @@ export const siteConfig = {
     }
   },
   form: {
-    destination: "mailto:jose.pablo.martin.garcia@gmail.com",
+    destination: "mailto:contact@josepablomartin.com",
     subject: "Contacto desde la web profesional",
     fields: {
       name: { label: "Nombre", placeholder: "Tu nombre", error: "Escribe tu nombre." },
