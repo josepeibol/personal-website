@@ -32,7 +32,7 @@ export const siteConfig = {
   chapters: {
     story: {
       id: "perfil",
-      number: "02",
+      number: "01",
       label: "Perfil",
       titleLines: ["Producto, personas", "y tecnología"],
       paragraphs: [
@@ -43,14 +43,14 @@ export const siteConfig = {
     },
     detailScene: {
       id: "detalle",
-      number: "03",
+      number: "02",
       label: "Escala",
       titleLines: ["Claridad con impacto medible."],
       body: "Experiencia gestionando plataformas críticas, transiciones masivas y productos usados a escala internacional."
     },
     pillars: {
       id: "experiencia",
-      number: "04",
+      number: "03",
       label: "Experiencia",
       titleLines: ["Tres maneras", "de mover un producto."],
       items: [
@@ -76,7 +76,7 @@ export const siteConfig = {
     },
     contextScene: {
       id: "contexto",
-      number: "05",
+      number: "04",
       label: "Perspectiva",
       titleLines: ["Experiencia global.", "Mentalidad práctica."],
       body: "He trabajado entre Madrid, Praga, Argelia y Estados Unidos, conectando negocio y tecnología en contextos muy distintos.",
@@ -84,7 +84,7 @@ export const siteConfig = {
     },
     process: {
       id: "metodo",
-      number: "06",
+      number: "05",
       label: "Método",
       titleLines: ["De la ambigüedad", "a un siguiente paso claro."],
       intro: "Mi forma de colaborar reduce ruido y hace visible el avance desde el primer momento.",
@@ -97,33 +97,33 @@ export const siteConfig = {
     },
     faq: {
       id: "preguntas",
-      number: "07",
+      number: "06",
       label: "Preguntas",
-      titleLines: ["Antes de", "trabajar juntos."],
+      titleLines: ["¿Estás buscando", "a alguien así?"],
       items: [
         {
-          question: "¿Qué tipo de oportunidades buscas?",
+          question: "¿Qué tipo de servicios ofrezco?",
           answer: "Proyectos freelance y posiciones de Product Owner, Product Manager o Project Manager, especialmente en modalidad remota."
         },
         {
-          question: "¿En qué sectores has trabajado?",
+          question: "¿En qué sectores he trabajado?",
           answer: "Banca digital, aviación, consultoría, software empresarial, administración pública y operaciones logísticas."
         },
         {
-          question: "¿Puedes trabajar con equipos internacionales?",
+          question: "¿Puedo trabajar con equipos internacionales?",
           answer: "Sí. He coordinado equipos distribuidos en varios países y trabajo con fluidez en español, inglés y francés."
         },
         {
-          question: "¿Qué aportas a un proyecto en marcha?",
+          question: "¿Qué aporto a un proyecto que ya esté en marcha?",
           answer: "Capacidad para entender el contexto con rapidez, ordenar prioridades, alinear stakeholders y fortalecer la entrega y adopción del producto."
         }
       ]
     },
     contact: {
       id: "contacto",
-      number: "08",
+      number: "07",
       label: "Contacto",
-      titleLines: ["Cuéntame qué", "necesitas mover."],
+      titleLines: ["Cuéntame qué", "necesitas."],
       body: "Si buscas liderazgo de producto con visión técnica y experiencia internacional, podemos empezar con una conversación breve.",
       directEmail: "contact@josepablomartin.com",
       linkedin: { label: "LinkedIn", href: "https://www.linkedin.com/in/josepablomartin/" },
