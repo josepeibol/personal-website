@@ -17,6 +17,13 @@ export function PrimaryCTA({ cta, modifier = "" }) {
   return `<a class="primary-cta ${modifier}" href="${escapeHtml(cta.href)}"><span>${escapeHtml(cta.label)}</span><span aria-hidden="true">↗</span></a>`;
 }
 
+export function LanguageSwitcher(config) {
+  const currentLanguage = config.metadata.language;
+  return `<div class="language-switcher" role="group" aria-label="${escapeHtml(config.ui.languageLabel)}">
+    ${["en", "es"].map((language) => `<button type="button" lang="${language}" data-language="${language}" aria-label="${escapeHtml(config.ui.languages[language])}" aria-pressed="${String(currentLanguage === language)}">${language === "en" ? "ENG" : "ESP"}</button>`).join("")}
+  </div>`;
+}
+
 function picture(scene, priority = false) {
   return `<picture class="scene__picture">
     <source media="(max-width: 600px)" srcset="${escapeHtml(scene.mobileSrc)}" />
@@ -34,15 +41,16 @@ export function FullBleedScene({ scene, content, className = "", priority = fals
 
 export function Navigation(config) {
   return `<header class="site-header" data-header>
-    <a class="wordmark" href="#inicio" aria-label="${escapeHtml(config.brand.name)}, inicio">
+    <a class="wordmark" href="#inicio" aria-label="${escapeHtml(config.brand.name)}, ${escapeHtml(config.ui.homeLabel)}">
       <span><img src="${escapeHtml(config.brand.logo.src)}" alt="${escapeHtml(config.brand.logo.alt)}" /></span>
       <small>${escapeHtml(config.brand.category)}</small>
     </a>
     <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-menu" data-menu-button>
-      <span class="sr-only">Abrir menú</span><i></i><i></i>
+      <span class="sr-only">${escapeHtml(config.ui.openMenu)}</span><i></i><i></i>
     </button>
-    <nav id="site-menu" class="site-menu" aria-label="Navegación principal" data-menu>
+    <nav id="site-menu" class="site-menu" aria-label="${escapeHtml(config.ui.navigationLabel)}" data-menu>
       ${config.navigation.map((item) => `<a href="${escapeHtml(item.href)}">${escapeHtml(item.label)}</a>`).join("")}
+      ${LanguageSwitcher(config)}
       ${PrimaryCTA({ cta: config.cta, modifier: "primary-cta--nav" })}
     </nav>
   </header>`;
@@ -58,7 +66,7 @@ export function Hero(config) {
         ${PrimaryCTA({ cta: config.cta })}
       </div>
     </div>
-    <ul class="hero__attributes" aria-label="Especialidades">${config.promise.attributes.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>
+    <ul class="hero__attributes" aria-label="${escapeHtml(config.ui.specialtiesLabel)}">${config.promise.attributes.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>
   </div>`;
   return FullBleedScene({ scene: config.scenes.hero, content, className: "hero", priority: true, id: "inicio" });
 }
@@ -163,5 +171,5 @@ export function Footer(config) {
 }
 
 export function EditorialLanding(config) {
-  return `${Navigation(config)}<main id="contenido">${Hero(config)}${StoryChapter(config.chapters.story)}${DetailScene(config)}${DetailSequence(config.chapters.pillars)}${ContextScene(config)}${ClosingChapter(config.chapters.process)}${FAQChapter(config.chapters.faq)}${ContactChapter(config)}</main>${Footer(config)}`;
+  return `${Navigation(config)}<main id="main-content">${Hero(config)}${StoryChapter(config.chapters.story)}${DetailScene(config)}${DetailSequence(config.chapters.pillars)}${ContextScene(config)}${ClosingChapter(config.chapters.process)}${FAQChapter(config.chapters.faq)}${ContactChapter(config)}</main>${Footer(config)}`;
 }
