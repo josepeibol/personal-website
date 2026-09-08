@@ -3,20 +3,24 @@ export const siteConfig = {
     language: "es",
     title: "José Pablo Martín — Product Owner y Product Manager",
     description: "Product Owner y Product Manager con experiencia internacional en productos digitales, plataformas B2B y operaciones complejas.",
-    canonical: "https://pendiente-de-publicar.example/",
+    canonical: "https://josepablomartin.com/",
     socialImage: "assets/profile-hero.jpg"
   },
   brand: {
     name: "José Pablo Martín",
     shortName: "JPM",
+    logo: {
+      src: "assets/jp-mark.png",
+      alt: "Logotipo de José Pablo Martín"
+    },
     category: "Product Owner · Product Manager",
-    location: "Madrid, España · Trabajo remoto",
+    location: "España · Trabajo remoto",
     availability: "Disponible para proyectos freelance y oportunidades remotas"
   },
   promise: {
     eyebrow: "Producto digital con perspectiva técnica",
     titleLines: ["Pasemos de", "complejidad", "a productos que", "avanzan."],
-    body: "Alineo visión, equipos y ejecución para llevar productos digitales desde la decisión hasta la entrega.",
+    body: "Alineo visión, equipos y ejecución para llevar productos digitales desde la fase de decisión hasta la entrega.",
     attributes: ["Estrategia", "Entrega", "Adopción", "Colaboración", "Producto"]
   },
   cta: {
@@ -24,6 +28,7 @@ export const siteConfig = {
     href: "mailto:contact@josepablomartin.com"
   },
   navigation: [
+    { label: "Inicio", href: "#inicio" },
     { label: "Perfil", href: "#perfil" },
     { label: "Experiencia", href: "#experiencia" },
     { label: "Método", href: "#metodo" },
@@ -46,31 +51,31 @@ export const siteConfig = {
       number: "02",
       label: "Escala",
       titleLines: ["Claridad con impacto medible."],
-      body: "Experiencia gestionando plataformas críticas, transiciones masivas y productos usados a escala internacional."
+      body: "Cuento con experiencia gestionando plataformas críticas, transiciones masivas y productos usados a escala internacional."
     },
     pillars: {
       id: "experiencia",
       number: "03",
       label: "Experiencia",
-      titleLines: ["Tres maneras", "de mover un producto."],
+      titleLines: ["Recorramos juntos", "este camino."],
       items: [
         {
-          index: "01",
-          title: "Dar dirección",
+          index: ">",
+          title: "Dirección",
           body: "Visión de producto, roadmaps, backlog y relaciones con stakeholders para convertir objetivos en decisiones ejecutables.",
           proof: "Product Owner en IATA y BBVA"
         },
         {
-          index: "02",
-          title: "Entregar a escala",
+          index: ">",
+          title: "Organización",
           body: "Coordinación de equipos Scrum internacionales, UAT, calidad y gestión del cambio en entornos complejos.",
           proof: "3 equipos internacionales · 18 equipos SAFe"
         },
         {
-          index: "03",
-          title: "Hacer que se adopte",
+          index: ">",
+          title: "Impacto",
           body: "Experiencia de usuario, materiales de formación y comunicación para que la solución se entienda y se utilice.",
-          proof: "Transición de más de 100.000 usuarios B2B"
+          proof: "Transición de más de 100.000 usuarios B2B · 6M+ clientes de app"
         }
       ]
     },
@@ -86,7 +91,7 @@ export const siteConfig = {
       id: "metodo",
       number: "05",
       label: "Método",
-      titleLines: ["De la ambigüedad", "a un siguiente paso claro."],
+      titleLines: ["Colaboración, claridad ", "y contexto."],
       intro: "Mi forma de colaborar reduce ruido y hace visible el avance desde el primer momento.",
       steps: [
         { title: "Entender", body: "Contexto, usuarios, restricciones y la decisión que realmente hay que tomar." },
@@ -149,6 +154,8 @@ export const siteConfig = {
       src: "assets/profile-context.jpg",
       mobileSrc: "assets/profile-context.jpg",
       alt: "José Pablo Martín en un entorno natural junto a una cascada",
+      fitDesktop: "contain",
+      fitMobile: "contain",
       positionDesktop: "50% 42%",
       positionMobile: "57% 45%"
     }
@@ -160,7 +167,7 @@ export const siteConfig = {
       name: { label: "Nombre", placeholder: "Tu nombre", error: "Escribe tu nombre." },
       email: { label: "Email", placeholder: "tu@email.com", error: "Escribe un email válido." },
       company: { label: "Empresa o proyecto", placeholder: "Nombre de la organización" },
-      message: { label: "¿En qué puedo ayudarte?", placeholder: "Cuéntame brevemente el reto, el equipo o la oportunidad.", error: "Añade un mensaje de al menos 20 caracteres." }
+      message: { label: "¿En qué puedo ayudarte?", placeholder: "Coméntame brevemente el reto, el equipo o la oportunidad.", error: "Añade un mensaje de al menos 20 caracteres." }
     },
     consent: {
       label: "Acepto que mis datos se utilicen para responder a esta solicitud.",
@@ -195,7 +202,7 @@ export const siteConfig = {
   footer: {
     note: "Product Owner · Product Manager · Consultor independiente",
     copyright: "José Pablo Martín",
-    status: "Madrid · Disponible para remoto"
+    status: "España · Disponible para remoto"
   },
   pending: [
     "Sustituir el dominio provisional por la URL pública antes de publicar.",

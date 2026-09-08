@@ -20,7 +20,7 @@ export function PrimaryCTA({ cta, modifier = "" }) {
 function picture(scene, priority = false) {
   return `<picture class="scene__picture">
     <source media="(max-width: 600px)" srcset="${escapeHtml(scene.mobileSrc)}" />
-    <img src="${escapeHtml(scene.src)}" alt="${escapeHtml(scene.alt)}" ${priority ? 'fetchpriority="high"' : 'loading="lazy" decoding="async"'} style="--position-desktop:${escapeHtml(scene.positionDesktop)};--position-mobile:${escapeHtml(scene.positionMobile)}" />
+    <img src="${escapeHtml(scene.src)}" alt="${escapeHtml(scene.alt)}" ${priority ? 'fetchpriority="high"' : 'loading="lazy" decoding="async"'} style="--position-desktop:${escapeHtml(scene.positionDesktop)};--position-mobile:${escapeHtml(scene.positionMobile)};--fit-desktop:${escapeHtml(scene.fitDesktop || "cover")};--fit-mobile:${escapeHtml(scene.fitMobile || "cover")}" />
   </picture>`;
 }
 
@@ -35,7 +35,7 @@ export function FullBleedScene({ scene, content, className = "", priority = fals
 export function Navigation(config) {
   return `<header class="site-header" data-header>
     <a class="wordmark" href="#inicio" aria-label="${escapeHtml(config.brand.name)}, inicio">
-      <span>${escapeHtml(config.brand.shortName)}</span>
+      <span><img src="${escapeHtml(config.brand.logo.src)}" alt="${escapeHtml(config.brand.logo.alt)}" /></span>
       <small>${escapeHtml(config.brand.category)}</small>
     </a>
     <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-menu" data-menu-button>
@@ -110,7 +110,7 @@ export function ClosingChapter(chapter) {
   return `<section class="chapter process" id="${escapeHtml(chapter.id)}">
     <div class="wrap">
       <div class="chapter__grid chapter__grid--intro">${ChapterMarker(chapter)}<div><h2>${lines(chapter.titleLines)}</h2><p class="process__intro">${escapeHtml(chapter.intro)}</p></div></div>
-      <ol class="process__steps">${chapter.steps.map((step, index) => `<li><span>0${index + 1}</span><h3>${escapeHtml(step.title)}</h3><p>${escapeHtml(step.body)}</p></li>`).join("")}</ol>
+      <ol class="process__steps">${chapter.steps.map((step, index) => `<li><span></span><h3>${escapeHtml(step.title)}</h3><p>${escapeHtml(step.body)}</p></li>`).join("")}</ol>
       <p class="process__roles">${escapeHtml(chapter.roles)}</p>
     </div>
   </section>`;
@@ -151,7 +151,7 @@ export function ContactChapter(config) {
       <div class="contact__heading">${ChapterMarker({ ...c, light: true })}<h2>${lines(c.titleLines)}</h2><p>${escapeHtml(c.body)}</p></div>
       <div class="contact__grid">
         ${ContactForm(config)}
-        <aside class="contact__direct"><p>${escapeHtml(c.directEmail)}</p><a href="${escapeHtml(c.linkedin.href)}" target="_blank" rel="noreferrer">${escapeHtml(c.linkedin.label)} ↗</a><a href="${escapeHtml(c.resume.href)}" download>${escapeHtml(c.resume.label)} ↓</a></aside>
+        <aside class="contact__direct"><p>${escapeHtml(c.directEmail)}</p><a href="${escapeHtml(c.linkedin.href)}" target="_blank" rel="noreferrer">${escapeHtml(c.linkedin.label)} ↗</a></aside>
       </div>
     </div>
   </section>`;
