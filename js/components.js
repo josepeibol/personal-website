@@ -146,7 +146,7 @@ export function ContactForm(config) {
     <div class="field"><label for="message">${escapeHtml(fields.message.label)}</label><textarea id="message" name="message" rows="5" minlength="20" placeholder="${escapeHtml(fields.message.placeholder)}" required data-error="${escapeHtml(fields.message.error)}"></textarea><small class="field__error"></small></div>
     <div class="honeypot" aria-hidden="true"><label for="website">Website</label><input id="website" name="website" tabindex="-1" autocomplete="off" /></div>
     <div class="consent"><input id="consent" name="consent" type="checkbox" required data-error="${escapeHtml(f.consent.error)}" /><label for="consent">${escapeHtml(f.consent.label)}</label><small class="field__error"></small></div>
-    <p class="privacy-pending">${escapeHtml(f.consent.privacyLabel)}</p>
+    <p class="privacy-pending">${escapeHtml(f.consent.privacyLabel)}. <a href="${escapeHtml(f.consent.privacyHref)}">${escapeHtml(f.consent.privacyLink)}</a>.</p>
     <p class="form-status" aria-live="polite" data-form-status>${escapeHtml(f.states.ready)}</p>
     <button class="primary-cta primary-cta--button" type="submit"><span>${escapeHtml(config.cta.label)}</span><span aria-hidden="true">↗</span></button>
   </form>`;
@@ -167,7 +167,7 @@ export function ContactChapter(config) {
 
 export function Footer(config) {
   const year = new Date().getFullYear();
-  return `<footer class="footer"><div class="wrap"><p>${escapeHtml(config.footer.note)}</p><p>© ${year} ${escapeHtml(config.footer.copyright)}</p><p>${escapeHtml(config.footer.status)}</p></div></footer>`;
+  return `<footer class="footer"><div class="wrap"><p>${escapeHtml(config.footer.note)}</p><p>© ${year} ${escapeHtml(config.footer.copyright)} · <a href="${escapeHtml(config.footer.privacyHref)}">${escapeHtml(config.footer.privacyLabel)}</a></p><p>${escapeHtml(config.footer.status)}</p></div></footer>`;
 }
 
 export function EditorialLanding(config) {

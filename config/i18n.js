@@ -97,8 +97,11 @@ export const translations = {
         message: { label: "How can I help?", placeholder: "Tell me briefly about the challenge, team or opportunity.", error: "Please add a message of at least 20 characters." }
       },
       consent: {
-        label: "I agree that my data may be used to respond to this enquiry.",
-        error: "Your consent is needed to prepare the email.", privacyLabel: "Privacy policy pending publication"
+        label: "I have read the privacy information.",
+        error: "Please confirm that you have read the privacy information.",
+        privacyLabel: "Controller: José Pablo Martín · Purpose: to respond to your enquiry · Rights: access, correction, deletion and other rights",
+        privacyLink: "Read the full privacy policy",
+        privacyHref: "privacy.html"
       },
       states: {
         ready: "When you continue, your email application will open with a prepared message.",
@@ -109,9 +112,26 @@ export const translations = {
     },
     footer: {
       note: "Product Owner · Product Manager · Independent consultant", copyright: "José Pablo Martín",
-      status: "Spain · Available for remote work"
+      status: "Spain · Available for remote work", privacyLabel: "Privacy", privacyHref: "privacy.html"
     },
-    pending: ["Replace the provisional domain with the public URL before publishing.", "Publish and link a privacy policy."]
+    privacy: {
+      title: "Privacy policy",
+      description: "How personal data is handled on the professional website of José Pablo Martín.",
+      updated: "Last updated: 9 September 2026",
+      backLabel: "Back to the website",
+      summary: "This website does not use advertising or analytics cookies. If you contact me, I will use the information you send only to deal with your enquiry.",
+      sections: [
+        { title: "1. Who is responsible for your data?", paragraphs: ["Controller: José Pablo Martín.", "Contact: contact@josepablomartin.com.", "Location: Spain."] },
+        { title: "2. What data is processed and how is it obtained?", paragraphs: ["I process the information you choose to send by email, which may include your name, email address, company or project, the content of your message and any other information you include.", "The contact form does not send information to a website database. It prepares a message in your email application; the information reaches me only if you review and send that email.", "Like most websites, the hosting provider may generate technical security and access logs, such as IP address, date and time, requested resource, browser information and error records."] },
+        { title: "3. Why is the data processed and on what legal basis?", paragraphs: ["Enquiry data is used to reply, assess the requested project or professional opportunity, and continue the relationship you initiate. The legal basis is taking steps at your request before entering into a contract and, for general enquiries, my legitimate interest in answering communications addressed to me.", "Technical logs are processed to operate, protect and diagnose the website, based on the legitimate interest in maintaining a secure and reliable service.", "Your data is not used for advertising, newsletters, automated decision-making or profiling."] },
+        { title: "4. How long is the data kept?", paragraphs: ["Enquiry data is kept for as long as necessary to respond and manage the resulting relationship. Afterwards it may be retained, with access restricted, for the periods needed to meet or defend legal claims.", "Unsolicited résumés and job-related information are normally deleted after 12 months unless you ask for earlier deletion or authorise a longer period. Technical logs are kept only for the period reasonably required for security and troubleshooting."] },
+        { title: "5. Who receives the data?", paragraphs: ["Data is not sold. It may be processed by providers that support email and website hosting, acting under their own terms or, where applicable, as service providers. It may also be disclosed to public authorities when required by law.", "If a provider processes data outside the European Economic Area, the transfer will rely on a valid GDPR mechanism, such as an adequacy decision or standard contractual clauses, where required."] },
+        { title: "6. Your rights", paragraphs: ["You may request access to, correction or deletion of your data, restriction of processing, data portability where applicable, or object to processing based on legitimate interests. You may also withdraw consent at any time where consent is the legal basis; withdrawal does not affect earlier lawful processing.", "To exercise your rights, write to contact@josepablomartin.com and identify your request. If necessary, I may ask for information to verify your identity. You may also lodge a complaint with the Spanish Data Protection Agency (AEPD) at www.aepd.es."] },
+        { title: "7. Cookies and local storage", paragraphs: ["This website does not currently use advertising or analytics cookies. It stores only your language preference in your browser's local storage (jpm-language). This preference is not sent to me and you can remove it by clearing the website data in your browser."] },
+        { title: "8. Changes to this policy", paragraphs: ["This policy may be updated if the website, its providers or the applicable rules change. The publication date shown above identifies the current version."] }
+      ]
+    },
+    pending: ["Replace the provisional domain with the public URL before publishing."]
   },
   es: {
     metadata: {
@@ -207,8 +227,11 @@ export const translations = {
         message: { label: "¿En qué puedo ayudarte?", placeholder: "Coméntame brevemente el reto, el equipo o la oportunidad.", error: "Añade un mensaje de al menos 20 caracteres." }
       },
       consent: {
-        label: "Acepto que mis datos se utilicen para responder a esta solicitud.",
-        error: "Necesito tu consentimiento para preparar el correo.", privacyLabel: "Política de privacidad pendiente de publicar"
+        label: "He leído la información de privacidad.",
+        error: "Confirma que has leído la información de privacidad.",
+        privacyLabel: "Responsable: José Pablo Martín · Finalidad: responder a tu consulta · Derechos: acceso, rectificación, supresión y otros derechos",
+        privacyLink: "Leer la política de privacidad completa",
+        privacyHref: "privacy.html?lang=es"
       },
       states: {
         ready: "Al pulsar, se abrirá tu aplicación de correo con el mensaje preparado.",
@@ -219,8 +242,25 @@ export const translations = {
     },
     footer: {
       note: "Product Owner · Product Manager · Consultor independiente", copyright: "José Pablo Martín",
-      status: "España · Disponible para remoto"
+      status: "España · Disponible para remoto", privacyLabel: "Privacidad", privacyHref: "privacy.html?lang=es"
     },
-    pending: ["Sustituir el dominio provisional por la URL pública antes de publicar.", "Publicar y enlazar una política de privacidad."]
+    privacy: {
+      title: "Política de privacidad",
+      description: "Cómo se tratan los datos personales en la web profesional de José Pablo Martín.",
+      updated: "Última actualización: 9 de septiembre de 2026",
+      backLabel: "Volver a la web",
+      summary: "Esta web no utiliza cookies publicitarias ni de analítica. Si contactas conmigo, usaré la información que envíes únicamente para atender tu consulta.",
+      sections: [
+        { title: "1. ¿Quién es el responsable de tus datos?", paragraphs: ["Responsable del tratamiento: José Pablo Martín.", "Contacto: contact@josepablomartin.com.", "Ubicación: España."] },
+        { title: "2. ¿Qué datos se tratan y cómo se obtienen?", paragraphs: ["Trato la información que decidas enviar por correo electrónico, que puede incluir tu nombre, dirección de email, empresa o proyecto, el contenido del mensaje y cualquier otro dato que incluyas.", "El formulario de contacto no envía información a una base de datos de la web. Prepara un mensaje en tu aplicación de correo; la información solo me llega si revisas y envías dicho correo.", "Como ocurre en la mayoría de webs, el proveedor de alojamiento puede generar registros técnicos de acceso y seguridad, como la dirección IP, fecha y hora, recurso solicitado, información del navegador y registros de errores."] },
+        { title: "3. ¿Para qué se tratan los datos y cuál es la base jurídica?", paragraphs: ["Los datos de las consultas se utilizan para responderte, valorar el proyecto u oportunidad profesional planteada y continuar la relación que hayas iniciado. La base jurídica es la aplicación de medidas precontractuales a petición tuya y, para consultas generales, mi interés legítimo en atender las comunicaciones que recibo.", "Los registros técnicos se tratan para operar, proteger y diagnosticar la web, sobre la base del interés legítimo en mantener un servicio seguro y fiable.", "Tus datos no se utilizan para publicidad, boletines, decisiones automatizadas ni elaboración de perfiles."] },
+        { title: "4. ¿Durante cuánto tiempo se conservan?", paragraphs: ["Los datos de las consultas se conservan durante el tiempo necesario para responder y gestionar la relación resultante. Después podrán conservarse, con acceso restringido, durante los plazos necesarios para cumplir obligaciones o atender posibles responsabilidades legales.", "Los currículums no solicitados y la información relacionada con empleo se eliminan normalmente transcurridos 12 meses, salvo que solicites su supresión antes o autorices un plazo mayor. Los registros técnicos se conservan únicamente durante el periodo razonablemente necesario para seguridad y diagnóstico."] },
+        { title: "5. ¿Quién recibe los datos?", paragraphs: ["Los datos no se venden. Pueden ser tratados por los proveedores que prestan servicios de correo electrónico y alojamiento web, conforme a sus propias condiciones o, cuando corresponda, como encargados del tratamiento. También podrán comunicarse a administraciones públicas cuando exista una obligación legal.", "Si un proveedor tratase datos fuera del Espacio Económico Europeo, la transferencia se apoyará en un mecanismo válido conforme al RGPD, como una decisión de adecuación o cláusulas contractuales tipo, cuando sea necesario."] },
+        { title: "6. Tus derechos", paragraphs: ["Puedes solicitar el acceso, rectificación o supresión de tus datos, la limitación del tratamiento, la portabilidad cuando corresponda, u oponerte a los tratamientos basados en el interés legítimo. También puedes retirar el consentimiento en cualquier momento cuando esa sea la base jurídica, sin que ello afecte a los tratamientos anteriores.", "Para ejercer tus derechos, escribe a contact@josepablomartin.com e identifica tu solicitud. Si fuera necesario, podré pedir información para comprobar tu identidad. También puedes presentar una reclamación ante la Agencia Española de Protección de Datos (AEPD) en www.aepd.es."] },
+        { title: "7. Cookies y almacenamiento local", paragraphs: ["Esta web no utiliza actualmente cookies publicitarias ni de analítica. Únicamente guarda en el almacenamiento local de tu navegador tu preferencia de idioma (jpm-language). Esta preferencia no se me envía y puedes eliminarla borrando los datos del sitio desde tu navegador."] },
+        { title: "8. Cambios en esta política", paragraphs: ["Esta política podrá actualizarse si cambian la web, sus proveedores o la normativa aplicable. La fecha de publicación indicada arriba identifica la versión vigente."] }
+      ]
+    },
+    pending: ["Sustituir el dominio provisional por la URL pública antes de publicar."]
   }
 };
